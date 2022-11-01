@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <script>
+            //alert('hi');
+            // console.log('hello');
+            var a;
+            console.log(a);
+            var a = 1;
+            console.log(a);
+            a = "1";
+            console.log(a);
+
+            let b;
+            console.log(b);
+            b = 1;
+        
+            console.log(typeof ('문자'))
+            console.log(typeof (245))
+            console.log(typeof(function(){}));
+            console.log(typeof (true))
+            console.log(typeof ({}))
+            console.log(typeof([]));
+            console.log(typeof (NaN))
+            console.log(typeof (null))
+            console.log(a + "반갑습니다");
+            console.log(a + b);
+
+            function sesac() {
+                console.log("sesac hi!");
+            }
+            sesac();        //선언 후 실행이 되어야함.(실행이 먼저 되어서는 안됨)
+
+            function sesac2(abc, test, a) {
+               alert(abc + " " +  a + "hello");
+            }
+            //sesac2("홍길동","","13");
+            //sesac2("용산"," ",""); 
+
+            function init(){console.log("init"); }
+            function parameter1( a ){console.log(a);}
+            function parameter2( a, b ){console.log(a + "" + b );}
+            function parameter3( a, b, c ){
+                console.log(" a : "+  a );
+                console.log(" b : "+  b );
+                console.log(" c : "+  c );
+            }
+
+            init();
+            parameter1();
+            parameter1(10);
+            parameter2(5, 3);666
+            parameter3(1, 2, 3);
+            var variable = "hi";
+            parameter3(variable, variable, variable);
+            parameter3(variable, variable);
+            parameter3(variable);
+
+           var a = prompt("숫자를 입력하세요.")
+
+             if(a > 10){
+                console.log(" a > 10");
+                if(a>8){
+                    console.log(" a > 8");    
+                } else {
+                    console.log(" a < 8 ");
+                }
+
+                switch(a) {
+                    case 8:
+                        console.log("a 8!!");
+                        break;
+                }
+
+            } else if(a > 5) {
+                console.log(" a > 5");
+            } else if(a > 0 ){
+                console.log(" a > 0");
+            } else {
+              console.log("no!");}
+              
+              for( var i = 0; i < 10; i ++ ) {
+                console.log (" i: " + i)
+              }
+
+              var j =0;
+              while ( j < 10) {
+                console.log(" j :" + j);
+                j = j + 1;
+              }
+
+
+
+
+              for( var k = 2; k<9; k++) {
+                for(var j=1; j<9; j++){
+                    console.log(k+ "X" + j +"=");
+                }
+
+
+
+
+        
+</script>
+    </head>
+</html>

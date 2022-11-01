@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+        div{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: relative;
+        border-radius: 50%;
+        animation-name: circle;
+        animation-duration: 3s;
+        animation-iteration-count: 6;
+        animation-direction: negative;
+        animation-timing-function: ease;
+    }
+
+    @keyframes circle {
+     from{left: 0px;,top: 0px;}
+     25% {left: 300px; top: 0px;}
+     50% {left: 300px; top: 300px;}
+     75% {left: 0px; top: 300px;}
+     to { left: 0px; top: 0px;}
+
+     
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </html>
