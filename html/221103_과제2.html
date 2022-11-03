@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <div>방명록 입니다.</div> <br>
+
+        <title>
+            방명록만들기
+        </title>
+    </head>
+    <script>
+       var date = new Date();
+       var count = 0;
+        
+       function add_row(){
+        var tr = document.createElement("tr");
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var td4 = document.createElement("td");
+        var table = document.querySelector("table");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        table.appendChild(tr);
+        
+        count++;
+        td1.innerText = count;
+        var wirter = document.getElementById("writer");
+        var num1 = document.getElementById("num1");
+        td2.innerText = writer.value;
+        td3.innerText = num1.value;
+
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        td4.innerText = `${year}-${month}-${day} ${hour}:${minute}` ;
+       }
+
+    
+</script>
+
+   <body>
+   <strong>작성자</strong> <input type="text" id="writer" value=""> <br>
+   <strong>내용</strong> <input type="text" id="num1" value=""> <br>
+   <br>
+   <button onclick="add_row()">작성</button>
+   <br>
+
+    <table border="1" cellpadding="10" cellspacing="2">
+        <tr>
+            <td>번호</td>
+            <td>작성자</td>
+            <td>내용</td>
+            <td>작성일</td>
+        </tr>
+        
+    </table>
+   </body>
+</html>

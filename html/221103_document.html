@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title> document </title>
+     <script>
+        console.log( document. documentElement);
+        console.log( document. head );
+        console.log( document. title );
+        console.log( document. URL );
+        console.log( document. domain);
+     </script> 
+     </head>
+     <body>
+        <img src="./sea.jpg" width="100" height="100">
+        <img src="./sea.jpg" width="100" height="100">
+        <img src="./sea.jpg" width="100" height="100">
+        <div id="div1">
+        <input type="text" id="input1" value="입력값">
+        <p class="css1">p1</p>
+        <p class="css1">p2</p>
+        <div>
+            <p class="css1">p3</p>
+        </div>
+        <button type="botton" onclick="getData();">input 버튼</button>
+        <button type="botton" onclick="getData2();">p태그 버튼</button>
+        </div>
+
+        <script>
+            console.log(document.getElementById("input1"));
+            console.log(document.getElementsByClassName("css1"));
+            console.log(document.getElementsByClassName("css1")[0]);
+            console.log(document.getElementsByTagName("img"));
+            
+            //<선택자>
+
+            console.log(document. querySelector("#input1")); 
+            console.log(document. querySelector(".css1")); //가장 위에 있는친구를 가져옴
+            console.log(document. querySelectorAll(".css1")[1]);
+
+            function getData(){
+            var input = document.getElementById("input1");
+            console.log( input.value );
+         }
+            //위의내용 설명
+            // 1. 버튼을 누르면 getData() 실행 2. id가 input1인 요소를 찾아서 input 변수에 넣기 3. 선택된요소의 value를 console에 출력
+        
+            function getData2(){
+            var p1 = document.getElementsByClassName("css1")[0];
+            console.log( p1 );
+            console.log( p1.value );
+            console.log( p1.text );
+            console.log( p1.html );
+            console.log( p1.innerText );
+            console.log( p1.innerHTML );
+         
+            //p1.innerText = "p태그입니다.";
+            p1.innerTextt = "<strong> p태그입니다.</strong>";
+        }
+
+        </script>
+
+
+    </body>
+</html>

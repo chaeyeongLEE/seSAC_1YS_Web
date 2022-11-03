@@ -1,0 +1,38 @@
+<html>
+<head>
+   <title>calcurator</title>
+   <script>
+      
+      function calulate(){ 
+      var num1 = document.getElementById("num1").value;
+      var num2 = document.getElementById("num2").value;
+      var num3 = document.getElementById("cal").value;
+      var num4 = document.getElementById("result").value;
+     
+      if ( num3 == "+" ){
+         else if (num3 == "-") {console.log }
+         var result = Number(num1) + Number(num2);
+         else if var result = Number(num1) - Number(num2);
+         else if var result= Number(num1) / Number(num2);
+         else  var result = Number(num1) * Number(num2);
+
+         document.getElementById('result').value = result ;
+
+      }
+      }
+
+      document.querySelector('plus')
+   </script>
+   </head>
+     <body>
+     
+        값 1: <input type="text" id="num1"> <br>
+        값 2: <input type="text" id="num2"> <br>
+        연산자: <input type="text" id="cal"> <br>
+        결과: <input type="text" id="result"> <br><br>
+
+         <button type ="button" onclick="calulate()">계산하기</button>
+         <button type ="button" onclick="reset()">초기화</button>
+     </body>
+     </html>
+
