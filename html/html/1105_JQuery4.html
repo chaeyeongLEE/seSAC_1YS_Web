@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="../jquery-ui-1.13.2/jquery-ui.js"></script>
+        <link href="../jquery-ui-1.13.2//jquery-ui.css">
+     <style>
+        .fruit {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+      }
+         #img {
+        width: 50%;
+        height: 50%;
+      }
+    </style>
+    <script>
+    
+        function second() {
+            $("img").attr("src", "../apple.png");
+        }
+        function sizeup() {
+            $("img").attr("src", "../banana.png");
+        }
+        function third() {
+            $("img").attr("src", "../grape.jpg");
+        }
+        function first() {
+            $("img").attr("src", "../peach.jpg");
+        }
+
+    </script>
+    </head>
+    <body>
+        <div class="fruit">
+            <img src="../apple.png">
+            <button type="button" onclick="second()">사과</button>
+            <button type="button" onclick="sizeup()">바나나</button>
+            <button type="button" onclick="third()">포도</button>
+            <button type="button" onclick="first()">복숭아</button>
+            
+    </div>
+  </body>
+
+</html>

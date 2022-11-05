@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <style>
+            .class {
+                background-color: pink;
+                font-weight: bold;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+        <script>
+            function addClass() {
+                $("div").addClass("Class");   //class를 추가한다.
+            }
+            function removeClass() {
+                $("div").removeClass("Class");   
+            }
+            function hasClass() {
+                console.log($("div").hasClass("class")); // 내가 이 클래스를 지금 가지고있는지 확인하는 친구
+            }
+            function toggleClass() {
+                $("div").toggleClass("Class");   //있으면 제거하고, 없으면추가하는
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div>
+            div입니다.
+        </div>
+        <button type="button" onclick="addClass()">addClass</button>
+        <button type="button" onclick="removeClass()">removeClass</button>
+        <button type="button" onclick="hasClass()">hasClass</button>
+        <button type="button" onclick="toggleClass()">toggleClass</button>
+    </body>
+</html>
