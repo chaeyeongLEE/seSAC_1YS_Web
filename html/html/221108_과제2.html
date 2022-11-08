@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+        
+        
+           
+          <div class="p-2 mb-2 bg-secondary bg-gradient bg-opacity-50 text-white"><h1>환상의 나라 놀이동산</h1></div>
+            <title>놀이동산</title>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
+    <style>
+      p { margin:20px 0px; }
+      body{
+        background-image: url("C:\Users\SBAUser\Desktop\github\seSAC_1YS_Web\html\world.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+
+<script type="text/javascript">
+	var alert = function(msg, type) {
+		swal({
+			title : '',
+			text : msg,
+			type : type,
+			timer : 1500,
+			customClass : 'sweet-size',
+			showConfirmButton : false
+		});
+	}
+
+	var confirm = function(msg, title, resvNum) {
+		swal({
+			title : title,
+			text : msg,
+			type : "warning",
+			showCancelButton : true,
+			confirmButtonClass : "btn-danger",
+			confirmButtonText : "예",
+			cancelButtonText : "아니오",
+			closeOnConfirm : false,
+			closeOnCancel : true
+		}, function(isConfirm) {
+			if (isConfirm) {
+				swal('', '예약이 완료되었습니다.', "success");
+			}else{
+				swal('', '예약이 완료되지않았습니다.', "failed");
+			}
+
+		});
+	}
+
+	
+	function Confirm() {
+		confirm('', '예약을 진행하시겠습니까?');
+	}
+</script>
+</head>
+
+<body>
+    <div class="row">
+      <div class="card col">
+        <img src="../roller.jpg" class="img-fluid" alt="" />
+        <div class="card-body">
+          <h3 class="card-title">롤러코스터</h3>
+          <p class="card-text">2008년에 생겨 약 3분 12초동안 운행합니다. 최고 속도는 104km/h이고 최대 낙하 각도는 77입니다. </p>
+          <a href="https://namu.wiki/w/T%20%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4" class="btn btn-primary">자세한 설명</a>
+        </div>
+        <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">예약현황 90%</div>
+        </div>
+        </div>
+
+
+        <div class="card col">
+          <img src="../water.jpg" class="img-fluid" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">워터어트랙션</h3>
+            <p class="card-text">보트를 타고 물이 흐르는 트랙을 따라 이동하는 놀이기구입니다. 약 540m 움직이며 7분정도 운행합니다.</p>
+            <a href="https://namu.wiki/w/%ED%94%8C%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C?from=%ED%9B%84%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C" class="btn btn-primary">자세한 설명</a>
+          </div>
+          <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">예약현황 65%</div>
+          </div>
+          </div>
+
+        <div class="card col">
+                <img src="../horse.jpg" class="img-fluid" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">회전목마</h3>
+                  <p class="card-text">다양한 종류의 말을 시계방향으로 타며 스릴 넘치는 놀이기구를 못타는 분들께 추천드리는 놀이기구입니다.</p>
+                  <a href="https://namu.wiki/w/%ED%9A%8C%EC%A0%84%EB%AA%A9%EB%A7%88" class="btn btn-primary">자세한 설명</a>
+                </div>
+                <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">예약현황 33%</div>
+                </div>
+              </div>
+            </div>
+
+  </body>
+
+</html>
