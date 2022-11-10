@@ -1,25 +1,19 @@
 <html>
-    <head>
+     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
-        
-        
-           
-          <div class="p-2 mb-2 bg-secondary bg-gradient bg-opacity-50 text-white"><h1>환상의 나라 놀이동산</h1></div>
-            <title>놀이동산</title>
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-
-    <style>
-      p { margin:20px 0px; }
-      body{
-        background-image: url("C:\Users\SBAUser\Desktop\github\seSAC_1YS_Web\html\world.jpg"); 
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
+        <title>여행</title>
+     <style>
+      p { margin:20px 0px;}
+      h3 { background: palegoldenrod; }
+      input{ 
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 3px solid black;}
+     </style>
 
 <script type="text/javascript">
 	var alert = function(msg, type) {
@@ -35,8 +29,8 @@
 
 	var confirm = function(msg, title, resvNum) {
 		swal({
-			title : title,
-			text : msg,
+			title : '여행지를 선택해주세요',
+			text : msg, 
 			type : "warning",
 			showCancelButton : true,
 			confirmButtonClass : "btn-danger",
@@ -54,7 +48,6 @@
 		});
 	}
 
-	
 	function Confirm() {
 		confirm('', '예약을 진행하시겠습니까?');
 	}
@@ -62,48 +55,138 @@
 </head>
 
 <body>
-    <div class="row">
-      <div class="card col">
-        <img src="../roller.jpg" class="img-fluid" alt="" />
-        <div class="card-body">
-          <h3 class="card-title">롤러코스터</h3>
-          <p class="card-text">2008년에 생겨 약 3분 12초동안 운행합니다. 최고 속도는 104km/h이고 최대 낙하 각도는 77입니다. </p>
-          <a href="https://namu.wiki/w/T%20%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4" class="btn btn-primary">자세한 설명</a>
-        </div>
-        <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">예약현황 90%</div>
-        </div>
-        </div>
+  <nav class="navbar" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">여행을 떠나요~♪</a>
+    
+        <ul class="nav-item">
+          <a class="nav-link" href="#">국내여행</a>
+        </ul>
+        <ul class="nav-item">
+          <a class="nav-link" href="#">해외여행
+        </ul>
+        <ul class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            마이페이지
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">내정보</a></li>
+            <li><a class="dropdown-item" href="#">여행예약관리</a></li>
+            <li><a class="dropdown-item" href="#">고객센터</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+       </div>
+    </nav>
+    </form>
+    </div>
+  </nav>
+    <h4><strong>고객님,<br> 어떤 여행을 꿈꾸시나요?</strong></h4>
+    <input type="text" placeholder="어디로 떠나세요?">
 
-
-        <div class="card col">
-          <img src="../water.jpg" class="img-fluid" alt="" />
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="../spring.jpg" class="img-fluid img-thumbnail" alt="" />
           <div class="card-body">
-            <h3 class="card-title">워터어트랙션</h3>
-            <p class="card-text">보트를 타고 물이 흐르는 트랙을 따라 이동하는 놀이기구입니다. 약 540m 움직이며 7분정도 운행합니다.</p>
-            <a href="https://namu.wiki/w/%ED%94%8C%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C?from=%ED%9B%84%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C" class="btn btn-primary">자세한 설명</a>
+            <details>
+            <summary><h3>봄의 여행</h3></summary>
+           
+            
+            
+            <p class="card-text">봄공기 훈훈한 4월에 피어나는 벚꽃과 산수유, 튤립 등을 만날 수 있는 설렘가득한 봄이 찾아왔습니다. 달달하게 봄을 즐길 수 있는 국내 다양한 지역을 소개합니다.
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=b647a5ef-755d-43ea-83a2-7533ec8feb3c&big_category=A02&mid_category=A0203&big_area=38" target="_self">새하얀 매화 향기가 그윽한 "광양"</a>
+              </li> 
+              
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=ea3355b6-2c81-4cca-ae83-dd069820d368&con_type=11300" target="_self">국내 최대의 산수유 군락지 "구례"</a> 
+              </li>
+
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0a5ec4ef-4d87-4f2f-810d-e3d9819e1aa0&con_type=11000" target="_self">벚꽃과 유채가 펼쳐지는 "거제"</a> 
+              </li>
+          </p>
+          <span class="badge text-bg-info">아이와 함께</span>
+          <span class="badge text-bg-warning">가족여행</span>
+          <span class="badge text-bg-dark">커플여행</span>
+          <br><br>
+            <a href="https://namu.wiki/w/T%20%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4" class="btn btn-dark">자세한 설명</a>
+          </div>
+          <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">예약현황 90%</div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+      <div class="col">
+        <div class="card">
+          <img src="../summer.jpg" class="img-fluid img-thumbnail" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">여름</h3>
+            <p class="card-text">시원한 바다에 풍덩 빠져 몸도 식히고, 맑은 물속에서 바다생물 보며 마음도 정화하는 스노클링까지 여름을 즐길 수 있는 다채로운 휴가를 보내보세요. 산이면 산, 바다면 바다 풍성한 여름휴가를 선보입니다. 
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=86380171-9c16-49e7-9f59-02c9848b2793&con_type=10100" target="_self">해녀가 되어 바닷속을 누벼보는 "제주"</a>
+              </li> 
+              
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=05f647eb-db7f-4308-9b3c-2989254f8aba&big_category=A03&mid_category=A0303&big_area=32" target="_self">멋지게 파도를 가르며 미끄러져 내려오는 서핑을 즐길 수 있는 "양양"</a> 
+              </li>
+
+              <li>
+                <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=77fb9d36-70ba-4451-b860-8652c4d9d938&con_type=10000" target="_self">푸르른 여름숲을 즐길 숲캉스가 있는 "봉화"</a> 
+              </li>
+            </p>
+            <span class="badge text-bg-light">친구와 함께</span>
+            <span class="badge text-bg-success">나홀로</span>
+            <span class="badge text-bg-dark">커플여행</span>
+          <br><br>
+             <a href="https://namu.wiki/w/%ED%94%8C%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C?from=%ED%9B%84%EB%A3%B8%EB%9D%BC%EC%9D%B4%EB%93%9C" class="btn btn-primary">자세한 설명</a>
           </div>
           <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
           <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">예약현황 65%</div>
           </div>
+        </div>
+  
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="../fall.jpg" class="img-fluid img-thumbnail" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">가을</h3>
+            <p class="card-text">여행의 절정, 여행의 황금기, 인생 여행 타이밍, 단풍철입니다. 울긋불긋 산천을 수놓는 색의 향연은 사계절이 뚜렷하고, 산 좋고 물 좋은 우리 대한민국에서만 누릴 수 있는 호사입니다.</p>
+            <a href="https://namu.wiki/w/%ED%9A%8C%EC%A0%84%EB%AA%A9%EB%A7%88" class="btn btn-primary">자세한 설명</a>
           </div>
-
-        <div class="card col">
-                <img src="../horse.jpg" class="img-fluid" alt="" />
-                <div class="card-body">
-                  <h3 class="card-title">회전목마</h3>
-                  <p class="card-text">다양한 종류의 말을 시계방향으로 타며 스릴 넘치는 놀이기구를 못타는 분들께 추천드리는 놀이기구입니다.</p>
-                  <a href="https://namu.wiki/w/%ED%9A%8C%EC%A0%84%EB%AA%A9%EB%A7%88" class="btn btn-primary">자세한 설명</a>
-                </div>
-                <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">예약현황 33%</div>
-                </div>
-              </div>
+          <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">예약현황 33%
             </div>
-
+          </div>
+        </div>
+  
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="../winter.jpg" class="img-fluid img-thumbnail" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">겨울</h3>
+            <p class="card-text">추운겨울에 실내에 웅크려있는 것이 지겨운 분들을 위한 국내 추천 여행지입니다. 겨울에만 느낄 수 있는 장소의 매력과 온천까지 다함께 즐길 수 있습니다.</p>
+            <a href="https://namu.wiki/w/%ED%9A%8C%EC%A0%84%EB%AA%A9%EB%A7%88" class="btn btn-primary">자세한 설명</a>
+          </div>
+          <button class="btn btn-danger" onclick="Confirm();">예약하기</button>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">예약현황 33%</div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
   </body>
 
 </html>
