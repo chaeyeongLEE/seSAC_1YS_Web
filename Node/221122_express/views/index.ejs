@@ -1,0 +1,21 @@
+
+<html>
+<head>
+    <title><%=title%></title>
+</head>
+
+<body>
+    <%-include("nabar.ejs")%>
+    ejs파일로 만든 html
+ <!--<img src = "/static/img/cats.jpg"/>-->
+
+    <% for(var i=0; i<data.length; i++) {%>
+        <div>안녕<%=data[i]%></div>
+    <% } %> 
+
+    <div style="color:red"><%="<span style='color:blue'>안녕</span>"%>하세요</div>
+    <div style="color:red"><%-"<span style='color:blue'>안녕</span>"%>하세요</div>
+   
+    <%-include("test.ejs")%>
+</body>
+</html>

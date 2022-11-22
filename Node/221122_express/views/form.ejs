@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>get 요청</h3>
+        <form action="/getForm" method="get">
+            <input type="text" name="id">
+            <input type="password" name="pw">
+            <fieldset>
+                <legend>성별</legend>
+                <input type="radio" name="gender" value="남자" id="men"> <label for="men">남자</label>
+                <input type="radio" name="gender" value="여자" id="women"> <label for="women">여자</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>취미</legend>
+
+            <input type="checkbox" name="interest" value="넷플보기"/>넷플보기
+            <input type="checkbox" name="interest" value="음악감상"/>음악감상
+            <input type="checkbox" name="interest" value="운동"/>운동
+            </fieldset>
+            <button type="submit">제출</button>
+        </form>
+
+        <h3>post 요청</h3>
+        <form action="/postForm" method="post">
+            <input type="text" name="id" required>
+            <input type="password" name="pw" placeholder="비밀번호" required>
+
+            <select name="birthMonth">
+                <% for( var i =1; i<=12; i++) {%>
+                <option value="<%=i%>"><%=i%>월</option>
+                <% } %>
+                
+            </select>
+
+            <textarea name="content" rows="10" cols="20" required></textarea>
+
+            <button type="submit">제출</button>
+        </form>
+
+        <script>
+            console.log(document.forms["getform"])
+        </script>
+    </body>
+</html>
