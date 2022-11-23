@@ -24,4 +24,5 @@ result.test(); */
 
 /* .으로 key값 가져오기 */
 
+
 /* 터미널 열기: control + ~ */

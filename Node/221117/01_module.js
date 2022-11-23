@@ -7,6 +7,11 @@ const array = {
 };
 module.exports = array;
 
+function test(){
+    console.log('test');
+}
+test;
+
 /* module.exports = {
     a,
     b

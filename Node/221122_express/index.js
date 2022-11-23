@@ -50,6 +50,12 @@ app.get("/form",(req, res)=>{
     res.render("form");
 })
 
+app.get("/image",(req, res)=>{
+    res.render("img", {
+        data : ["1","2","3"]
+    });
+})
+
 app.get("/gettest",(req, res)=>{
     res.render("gettest");
 })
