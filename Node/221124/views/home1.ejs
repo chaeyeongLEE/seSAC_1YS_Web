@@ -1,22 +1,37 @@
 <html>
     <head>
-        <title>post로 정보 받기</title>
+        <title>axios로 보내기</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
-    <body>
-       
-           <form action="/getFormtwo" method="get">
+    
+    <script>
+        function sendGet(){
+           var form = document.getElementById("form_info");
+          
+            axios({
+                method: "get",
+                url: "/home2",
+                params:{name: form.name.value,
+                        gender: form.gender.value,
+                        year: form.birthyear.value,
+                        month: form.birthMonth.value,
+                        date: form.birthDate.value}
+            }).then(function(res){
+                alert(res.data);
+            });
+        }
+    </script>
+</head>
+<body><form id="form_info">
             이름 <input type="text" name="name"> <br>
-            ID <input type="text" name="id" placeholder="id" pattern="^/([a-z0-9]){3,}$" title="소문자, 숫자, 3글자 이상" required> <br>
-            PW <input type="password" name="pw" placeholder="pw" pattern="^/([a-zA-Z0-9]){6,12}$" title="대소문자, 숫자로 6글자 이상 12글자 이하" required>
-            연락처 <input type="password" name="phone" placeholder="010-0000-0000" pattern="^/d{3}-/d{3,4}}$" title="대소문자, 숫자로 6글자 이상 12글자 이하"> 
+            ID <input type="text" name="id" placeholder="id"> <br>
+            PW <input type="password" name="pw" placeholder="pw">
             
             <fieldset>
                 <legend>성별</legend>
-                <input type="radio" name="gender" value="남자" id="men" > <label for="men">남자</label>
+                <input type="radio" name="gender" value="남자" id="men"> <label for="men">남자</label>
                 <input type="radio" name="gender" value="여자" id="women" > <label for="women">여자</label>
             </fieldset>
-
-
 
             <fieldset>
                 <legend>생년월일</legend>
@@ -37,14 +52,8 @@
                 </select>
 
             </fieldset>
-            <fieldset> 
-            <legend>관심사</legend>
-            <input type="checkbox" name="interest" value="여행"/>여행
-            <input type="checkbox" name="interest" value="패션"/>패션
-            <input type="checkbox" name="interest" value="음식"/>음식
-            </fieldset>
             <br>
-            <button type="submit">회원가입</button>
+            <button type="button" onclick="sendGet();" >회원가입</button>
         </form>
 
        

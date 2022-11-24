@@ -1,8 +1,8 @@
 /* const num = require('./01_module.js'); */
 const {a, b} = require('./01_module.js');
 //num = {a:1, b:3}
-const a = num.a;
-const b = num.b;
+// const a = num.a;
+// const b = num.b;
 
 function add(){
     return a + b;
