@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Practice36</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            
+
+    function register() {
+    var form = document.getElementById("form_register");
+    var formData = new FormData(form);
+
+     /*
+    const formData = new FormData();     s
+    const file = document.getElementById("dynamic_file");
+    formData.append("userfile", file.files[0]);    
+
+    
+    
+    axios({
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      url: "/registers",
+      method: "post",
+      data: formData       
+    }).then((response) => {
+      $("img").attr("src", response.data.path); 
+    })
+    } 
+    */
+
+
+    axios({
+           method: "post",
+           url: "/registers",
+           data: formData,
+           headers: {
+            'Content-Type': 'multipart/form-data'
+            }
+            }).then((a) => { return a.data; })
+            .then((d) => {
+            document.querySelector("img").src = d.path;
+            });
+            }
+        </script>
+    </head>
+
+    <body>
+        <form id="form_register" enctype="multipart/form-data">
+            <fieldset style="width:300px;">
+                <legend> 개인 정보 </legend>
+                아이디 : <input type="text" name="id"><br>
+                비밀번호 : <input type="password" name="pw"><br>
+                이름 : <input type="text" name="name"><br>
+                나이 : <input type="text" name="age"><br>
+                프로필사진: <input type="file" name="userfile">
+        </fieldset>
+            <button type="reset">리셋</button>
+            <button type="button" onclick="register();">회원가입</button>
+            <img>
+        </form>
+    </body>
+</html>
