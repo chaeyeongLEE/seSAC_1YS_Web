@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>mvc 회원가입</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        
+            .d-none {
+                display: none;
+            } 
+        </style>
+    </head>
+    <body>
+        <form id="form_register">
+            <legend>회원가입</legend>
+            <input type="hidden" name="id" > 
+            이름 : <input type="text" name="name" placeholder="사용자 이름"><br>
+            아이디 : <input type="text" name="id" placeholder="아이디"><br>
+            비밀번호 : <input type="password" name="pw" placeholder="비밀번호"><br>
+            <button type="button" onclick="axiosPost();">회원가입</button>
+            <!-- <div class="update-btn d-none">
+              <% for(let i=0; i<data.length; i++) { %>
+                <button type="button" onclick="update_user('<%=data[i].id%>', this);">수정하기</button>
+                <button type="button" onclick="delete_user('<%=data[i].id%>', this);">탈퇴하기</button>
+                <% } %> 
+            </div>
+            !-->
+            <div class="register-btn">
+                <button type="button" onclick="register();">회원가입</button>
+            </div>
+            </fieldset>
+        </form>
+
+        <script>
+            let update_here;
+            
+            function register(){
+                let form = document.getElementById("form_register")
+                let data = {
+                    name: form.name.value,
+                    id: form.id.value,
+                    pw: form.pw.value
+                }
+                axios({
+                    method: 'post',
+                    url:'/user/register',
+                    data: data
+                })
+                .then((response)=> {
+                    if(response.data) element.parentElement. parentElement.register();
+                    else alert("알 수 없는 오류 발생");                    
+                })
+            }
+      
+    
+           
+              /*  function update_user(){
+                var form = document.getElementById("form_register");
+                axios({
+                    method: 'patch',
+                    url: "/user/update",
+                    data: {
+                        name: form.name.value, 
+                        id: form.id.value, 
+                        pw: form.pw.value
+                    }
+                })
+                .then((response)=>{
+                    update_here. children[0].innerText = form.name.value;
+                    update_here. children[2].innerText = form.pw.value;
+
+                    form.name.value = "";
+                    form.id.value = "";
+                    form.pw.value = "";
+                    $(".update-btn").addClass("d-none"); 
+                    $(".register-btn").removeClass("d-none"); 
+
+                })
+            }
+            
+            function update_load(id, element){
+                axios({
+                    method:'get',
+                    url: "/user/get_user",
+                    params: { id: id, pw: pw }
+                   
+                })
+                .then((response)=> {
+                    var form = document.getElementById("form_register");
+                    form.name.value = response.data.name;
+                    form.id.value = response.data.id;
+                    form.pw.value = response.data.pw;
+                    $(".update-btn").removeClass("d-none"); 
+                    // 업데이트버튼에서 d-none 을 지우겠다.
+                    $(".register-btn").addClass("d-none"); 
+                
+                    update_user = element.parentElement.parentElement;
+                })
+            }
+            
+            
+            function delete_visitor(delete_id, element){
+                axios({
+                    method:'delete',
+                    url: '/visitor/delete', 
+                    data: {id: delete_id}
+                })
+                .then((response)=> {
+                    if(response.data) element.parentElement. parentElement.remove();
+                    else alert("알 수 없는 오류 발생");                    
+                })
+            }
+            // 위 테이블 내 this의 의미:어떤 태그에 함수를 달 때 this 의 의미는 함수에 걸려있는 태그를 담는다. delete_visitor의 버튼 태그를 담음
+
+            */
+        </script>
+
+</body>
+</html>
