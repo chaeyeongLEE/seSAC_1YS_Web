@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h2 id="hello"> 안녕하세요 </h2> 
+<h2 id="hi"> 올때메로나 </h2> 
+<div class="alert-box" id="alert"> Alert박스 </div>
+
+<div class="alert-box" id="id"> 아이디를 입력해주세요 </div>
+<div class="alert-box" id="pw"> 비번을 입력해주세요</div>
+
+
+<button id="close">X</button>
+
+
+<button onclick="알림창열기('block')">버튼</button>
+<button onclick="알림창닫기()">닫기</button>
+
+<button onclick="아이디입력()">버튼1</button>
+<button onclick="비번입력()">버튼2</button>
+<button onclick="리셋()">리셋</button>
+<script>
+/**
+document.getElementById('hello').style.fontSize = '30px'; 
+document.getElementById('hi').innerHTML = '올때바밤바';
+
+웹문서. .은 "~의"라는 뜻으로 해석하면된다.d에 의해서 문서요소를 가져오세요.
+**/
+document.getElementById('close').addEventListener('click', function() {
+    
+});
+
+function 알림창열기(구멍) {
+    document.getElementById('id').style.display='구멍';
+}
+function 알림창닫기() {
+    document.getElementById('alert').style.display='none';
+}
+
+function 아이디입력() {
+    document.getElementById('id').style.display='block';
+}
+function 비번입력() {
+    document.getElementById('pw').style.display='block';
+}
+
+function 리셋() {
+    document.getElementById('id','pw').style.display='delete';
+}
+</script>
+</body>
+</html>
