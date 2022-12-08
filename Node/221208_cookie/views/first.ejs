@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>session</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+        <script>    
+           function axiosPost(){
+                var form = document.getElementById("form_register");
+                axios({
+                    method: "post",
+                    url: "/login",
+                    data: {id: form.id.value, pw: form.pw.value}
+                }).then(function(res){
+                    console.log("axiosPost");
+                }); 
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form id="form_register">
+            아이디 : <input type="text" name="id"><br>
+            비밀번호 : <input type="password" name="pw"><br>
+            <button type="button" onclick="" >로그인</button>
+            <button type="button" onclick="axiosPost();">회원가입</button>
+            <div style="text-align:center;" id="result"></div>
+        </form>
+    </body>
+</html>
