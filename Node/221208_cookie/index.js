@@ -12,23 +12,43 @@ app.use(session({
 //}
   // secure:  //true 보안서버에서만 작동
 }))
-
-const user = {id: "", pw: ""};
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 app.set('view engine', 'ejs')
 app.use( express.static( 'public' ) );
 
 
-app.get("/register",(req, res)=>
-{res.render("first")
-});
+//<-------------->
+const user = {id: "a", pw: "1"};
 
-app.post("/login",(req,res)=>{
-    console.log(req.body);
-    
-    res.render("first", {data: req.body});
+app.get("/",(req, res)=>{
+  console.log(req.session.user);
+  if(req.session.user) res.render("first", {isLogin: true, id: req.session.user});
+  else res.render("first", {isLogin: false});
 })
 
+app.get("/login",(req,res)=>{
+    console.log("login");
+})
+
+app.post("/login", (req, res)=>{
+  if(req.body.id == user.id && req.body.pw == user.pw) {
+    req.session.user = req.body.id;
+    res.send(true);
+  } else {
+    res.send(false);
+  }
+})
+
+app.get("/logout", (req, res)=> {
+    req.session.destroy(function(err){
+      if(err) throw err;
+
+      res.redirect("/");
+    })
+})
+/*
 app.get("/first",(req, res)=>{
     //res.render("first");
     if(req.session.user) res.render("first", {isLogin: true})
@@ -71,7 +91,7 @@ app.get("/setSession", (req, res)=>{
 req.session.user = "id";
 res.send("세션 생성 성공");
 })
-
+*/
 app.listen(port, ()=>{
     console.log("server open", port);
 })

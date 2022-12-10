@@ -35,6 +35,32 @@ db.Sequelize = Sequelize;
 
 db.Visitor = require("./Visitor")(sequelize, Sequelize);
 db.User = require("./user")(sequelize, Sequelize);
+db.Procuct = require("./Product")(sequelize, Sequelize);
+db.Procuct = require("./Payment")(sequelize, Sequelize);
+
+db.User.hasmany(db.Payment, {
+    foreignKey : "user_id",
+    sourceKey : "user_id",
+    onDelete : "cascade"
+});
+
+db. Payment.belongsTo(db.User,{
+    foreignKey : "user_id",
+    sourceKey : "user_id",
+    onDelete : "cascade"
+});
+
+db.Procuct.hasmany(db.Payment, {
+    foreignKey : "user_id",
+    sourceKey : "user_id",
+    onDelete : "cascade"
+})
+
+db. Payment.belongsTo(db.Payment,{
+    foreignKey : "product_id",
+    sourceKey : "product_id",
+    onDelete : "cascade"
+});
 /**db = {
     "Sequelize" : Sequelize,
     "sequelize" : sequelize,
