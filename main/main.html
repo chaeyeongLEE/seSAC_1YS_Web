@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!--헤더-->
+    <div class="header">
+        <div class="navigation">
+        <a href="#"><img src="earths.png" width = "50" height="60" alt="around earth">around earth</a>
+        <a href="#">콘텐츠</a>
+        <a href="#">지도</a>
+    <div class="login"> 
+        <button onclick="login()" style="float: right">로그인</button>
+        <button onclick="register()" style="float: right">회원가입</button>
+    </div>
+    </div>
+    <!--메인-->
+        <div class="forest">
+        <a href="#"><img src="leaves.jpg" width = "1000" height="600" background-position="center";></a> 
+    </div>
+    <div class="section1">
+        <h2> 지구를 살리기 위한 우리들의 노력</h2>
+        <p>언제 어디서든 만날 수 있는 , 할 수 있는 환경보호</p>
+    <div class = "quick">
+        <h2>제로웨이스트 map </h2>
+        <p>언제 어디서든 제로웨이스트샵을 찾아볼 수 있어요</p>
+    <div class = "quick">
+        <h2>용기내 map </h2>
+        <p>다회용기 사용가능한 매장은 어디에?</p>
+
+    </div>
+    <script type="text/javascript">
+        var nav = document.getElementsByClassName("navigation");
+    
+        window.onscroll = function sticky() {
+          if(window.pageYOffset > nav[0].offsetTop) {
+            nav[0].classList.add("nav");
+          } else {
+            nav[0].classList.remove("nav");
+          }
+        }
+      </script>
+    </div>
+    <!--하부-->
+    <div class="down">
+        
+
+
+    </div>
+</body>
+</html>
