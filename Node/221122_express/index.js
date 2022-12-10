@@ -8,8 +8,7 @@ app.set('view engine', 'ejs') //ejs템플릿을 쓰겠다.
 // static 이라는 실제 존재하는 폴더에 public 경로로 접근할 수 있도록 함.
 // src = "/public/img/cats.jpg"
 
-app.use(express.urlencoded({extended:true})); // x-www-urlencoded 데이터 해석
-app.use(express.json()); //json형태로 받아볼것. json은 딕셔너리형태와 비슷하다.
+ㅊ //json형태로 받아볼것. json은 딕셔너리형태와 비슷하다.
 // {
 //    key: value
 // }
