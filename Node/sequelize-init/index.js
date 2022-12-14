@@ -22,3 +22,10 @@ app.get('*', (req, res)=>{
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
+
+
+// loginPage = {
+//     res.render ('/loginPage')
+// }
+// // ejs 
+// //파일에 정의된 CSS와 내가 정의한 CSS가 다를 수 있으니 
