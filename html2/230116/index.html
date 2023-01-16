@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 id="hello" >안녕하세요 </h2>
+    <h2 id="hi" >올 때 메로나</h2>
+    <script>
+        
+        document.getElementById('hello').innerHTML = '안녕';
+        // 웹문서 -> (.은 ~의 라는 뜻)id에 의해서 hello인 html요소 가져와. 내부글자.
+        // =는 대입의 의미이다.(같다는 의미가 아님)
+        // 문자는 따옴표 안에 작성
+        document.getElementById('hello').style.color = 'pink';
+        document.getElementById('hello').style.fontSize = '30px';
+        document.getElementById('hi').innerHTML = '올 때 바밤바';
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title"> Alert 박스 </p> 
+        <button id="close">  닫기  </button>
+    </div> 
+        
+        <button onclick="alert('아이디입력하셈')">버튼1</button>
+        <button onclick="alert('비번입력하셈')">버튼2</button>
+    </div> 
+
+    
+
+    <script>
+        function openalert(구멍) {
+            document.getElementById('alert').style.display = 구멍;
+        }
+
+        function alert(구멍) {
+            document.getElementById('title').innerHTML = 구멍;
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        //1. 함수에 구멍을 뚫어놓으면(=파라미터) 2. = 뒤에 구멍값이라는 값이 부여됨
+
+        /*function closealert() {
+            document.getElementById('Alert').style.display='none';
+        }*/
+
+        document.getElementById('close').addEventListener('click',function (){
+            document.getElementById('alert').style.display = 'none';            
+        });
+        
+    </script>
+    
+</body>
+</html>
