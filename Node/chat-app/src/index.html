@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>chat-app</title>
+</head>
+<body>
+    <div class="app__wrap">
+        <div id="info" class="app__info"></div>
+        <div id="chatWindow" class="app__window"></div>
+        <div class="app__input__wrap">
+            <input id="chatInput" type="text" class="app__input" autofocus placeholder="대화를 입력해주세요.">
+            <button id="chatMessageSendBtn" class="app__button">전송</button>
+        </div>
+    </div>
+    <script src="./socket.socket.io.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
