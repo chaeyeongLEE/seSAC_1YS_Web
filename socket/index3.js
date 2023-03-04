@@ -4,7 +4,7 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/index3.html");
 });
 
 // 클라이언트 소켓이 연결이 되면 콜백 함수가 실행된다.
@@ -26,12 +26,6 @@ io.on("connection", (socket) => {
   //     socket.emit("response", "hello : 안녕하세요!");
   //   });
 
-  let data = {
-    hello: "안녕하세요!",
-    study: "공부하세요!",
-    bye: "안녕히가세요!",
-  };
-
   //send라는 이벤트로 송신이 오면 메시지가 msg에 담김
   socket.on("send", (msg) => {
     console.log(msg);
@@ -44,6 +38,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(8000, () => {
-  console.log("Server port : ", 8000);
+http.listen(8080, () => {
+  console.log("Server port : ", 8080);
 });

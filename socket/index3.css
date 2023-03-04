@@ -1,4 +1,102 @@
-.wrap-box{
+@charset "utf-8";
+
+.app__wrap{
+    margin: 0 auto;
+    padding: 50px 0 0;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+    font-size: 14px;
+    border-top: 20px solid #e8cef0;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-color: rgb(151, 176, 161);
+}
+
+.app__info{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background: #dbe2a1;
+}
+
+.app__window{
+    overflow-y: auto;
+    padding: 10px 20px;
+    height: 400px;
+    background: #f4f4e0;
+}
+
+.output__user{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.output__user__name{
+    margin-right:10px;
+    font-weight:700;
+    color: #dd8cb7;
+}
+
+.app__input__wrap{
+    padding: 12px;
+    background: #f8f8f8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+.app__input__wrap:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.app__input{
+    float: left;
+    display: block;
+    width: 80%;
+    height: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.app__button{
+    float: left;
+    display: block;
+    width: 20%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .wrap-box{
     background-color: rgba(185, 181, 204, 0.781);
     width: 600px;
     height: 1000px;
@@ -81,4 +179,4 @@ hr {
     height:30px;
     margin-left: 20px;
 }
-
+ */

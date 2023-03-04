@@ -22,6 +22,9 @@
                 console.log('server connected');
             })
 
+
+          
+
             socket.on('welcome', (data) => {
                 // data : {msg : ''}
                 console.log(data.msg)
@@ -43,5 +46,6 @@
                 socket.emit('send', msg)
             }
         </script>
+         <!-- <script src="/index.js"></script> -->
     </body>
 </html>

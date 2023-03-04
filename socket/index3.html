@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index3.css">
+    <link rel="stylesheet" href="/socket/index3.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+
     <title>대화창 만들기</title>
 </head>
 <body>
-    <div class="wrap-box">
-        <div class="section1">
+        <!-- <div class="section1">
             <h2> OOO 채팅방 </h2>
-        </div>
-
-
-        <div class="section2">
+        </div> 
+      <div class="section2">
             <div id="emit">
             <img src="icon1.png" height="50px" width="50px" id="icon1">    
             <p> 안녕하세요</p>
@@ -21,12 +20,38 @@
                 <img src="icon2.png" height="50px" width="50px">    
                 <p>네, 안녕하세요~~~</p>
             </div>
+        </div> -->
+        <div class="app-wrap">
+            <div id="info" class="app__info"></div>
+            <div id="chatWindow" class="app__window"></div>
+            <div class="app__input__wrap">
+                <input id="chatInput" type="text" class="app__input" autofocus placeholder="대화를 입력해주세요.">
+                <button id="chatMessageSendBtn" class="app__button">전송</button>
         </div>
 
+<script>
+        const socket = io.connect();
 
-        <hr />
+        socket.on('connect', () => {
+            console.log('server connected');
+        })
+
+        socket.on('notice',(msg)=>{
+            const container = document.getElementsByClassName("./app__wrap")
+            const div = document.createElement("div");
+            div.classList.add('notice');
+            div.textContent = msg;
+            container.appendChild(div);
+        })
+       
+
+        </script>
+
+
+
+        <!-- <hr />
        <input />
-       <button>전송</button>
+       <button>전송</button> -->
        
 
     </div>
