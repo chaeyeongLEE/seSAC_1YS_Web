@@ -46,12 +46,22 @@ public class MainController {
         return "response";
     }
 
+    //pathvariable 사용시
     @GetMapping({"/introduce2/{name}", "/introduce2/{name}/{age}"})
     public String getAPI6(@PathVariable String name, @PathVariable(value = "age", required = false) String abc, Model model){
         model.addAttribute("name", name);
         model.addAttribute("age", abc);
         return "response";
     }
+
+   //
+    @GetMapping("/introduce3")
+    public String getAPI7(@RequestParam (value = "name") String name, @RequestParam (value = "age") String abc,Model model)
+    {  model.addAttribute("name", name);
+       model.addAttribute("age", abc);
+        return "response";
+    }
+
 
     //post로 값이 갔을 때 어떻게 받느냐 requestParams 이용해서!
     @PostMapping("/post/response1")

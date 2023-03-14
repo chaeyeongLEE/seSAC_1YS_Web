@@ -19,10 +19,10 @@ public class HelloController {
     @GetMapping("/people")
     public String getPeople(Model model){
             ArrayList<Person> people = new ArrayList<Person>();
-            people.add(new Person("이름1", 10));
-            people.add(new Person("이름2",20));
-            people.add(new Person("이름3", 30));
-            people.add(new Person("이름4", 40));
+            people.add(new Person("kim", 10));
+            people.add(new Person("lee",20));
+            people.add(new Person("hong", 30));
+            people.add(new Person("park", 40));
             model.addAttribute("people", people);
             return "people";
         }

@@ -14,13 +14,12 @@
         <br>
         <button type="submit">Get 전송</button>
     </form>
-
-    <form action="/get/response2" method="get" style="margin-right:20px;">
-        <h3>Get 전송(required = false)</h3>
-        이름 : <input type="text" name="name">
-    </form>
-
     <br>
+    <form action="/get/response2" method="get" style="margin-right: 20px;">
+    <h3>Get 전송 ( required = false )</h3>
+    <button type="submit">Get 전송</button>
+</form>
+
 
     <div style="margin-right: 20px;">
         <h3>Get 전송 - ~/{value} </h3>
@@ -36,16 +35,25 @@
         </a>
     </div>
     <br>
+
+
     <div>
         <h3>홍길동</h3>
-        <a href="/introduce/홍길동">
+        <a href="/introduce/name">
            .
         </a>
     </div>
 
     <div style="margin-right: 20px;">
         <h3>이름 나이</h3>
-        <a href="/introduce2/name=이채영/age=20">
+        <a href="/introduce2/name/age">
+            이름나이2
+        </a>
+    </div>
+
+    <div style="margin-right: 20px;">
+        <h3> 이름 나이 (3번째) </h3>
+        <a href="/introduce3?name=이름&age=나이">
             이름나이
         </a>
     </div>
