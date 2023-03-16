@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import sesacmybatis.sesacmybatis.domain.User;
-import sesacmybatis.sesacmybatis.domain.UserEntity;
 import sesacmybatis.sesacmybatis.dto.UserDTO;
 import sesacmybatis.sesacmybatis.service.MainService;
 
@@ -26,21 +25,14 @@ public class MainController {
 
     @GetMapping("/user/insert")
     public String getInsertUser(@RequestParam String name, @RequestParam String nickname, Model model){
-        UserEntity user = new UserEntity();
+        User user = new User();
         user.setName(name);
         user.setNickname(nickname);
 
         mainService.addUser(user);
 //원래 컨트롤러에서 도메인을 다루면 안된다. dto 로 받아서 전달하는것이 좋음.
+
         model.addAttribute("list", null);
         return "user";
     }
-
-    @GetMapping("/user")
-    public String getUser (@RequestParam String name, Model model){
-        ArrayList<UserDTO> userList = mainService.getUserName(name);
-        model.addAttribute("list", userList);
-        return "user";
-    }
-
 }
